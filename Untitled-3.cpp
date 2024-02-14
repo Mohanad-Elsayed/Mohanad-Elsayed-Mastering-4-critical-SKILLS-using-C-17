@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int r; cin >> r; int tr = r;
-    int reversed = 0;
-    while(r>0){
-        reversed = reversed*10 + r%10;
-        r/=10;
+    int n; cin >> n;
+    for (int i = 1, j = n; i <= n; ++i, --j){
+        for (int k = 1; k<=n; ++k){
+            if (k == i || k == j) cout << '*';
+            else cout << ' ';
+        }
+            cout << endl;
     }
-    cout << reversed << ' ' << 3 * reversed;
     return 0;
 }
