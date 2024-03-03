@@ -16,11 +16,11 @@ int tests(); int solve(){
   //TODO tests()  solve() //
     // !Start Here! */
     string s; cin >> s;
-    int carry = 0, cnt = 0;
+    int carry = 0;
     reverse(all(s));
-    for (int i = 0; i<s.size(); ++i, ++cnt){
+    for (int i = 0; i<s.size(); ++i){
       int n = s[i] - '0';
-      if (cnt < 5) n += 5;
+      if (i < 5) n += 5;
       n += carry;
       s[i] = (n%10) + '0';
       carry = n/10;
