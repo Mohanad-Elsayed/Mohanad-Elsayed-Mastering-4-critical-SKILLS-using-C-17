@@ -15,11 +15,15 @@ using namespace std;
 int tests(); int solve(){
   //TODO tests()  solve() //
     // !Start Here! */
-    string s; cin >> s;
-    forn(i, 0, s.size()){
-      cout << s[i]; 
-      if (i+1 < s.size() && s[i] != s[i+1]) cout << ' ';
+    string s1, s2;
+    cin >> s1 >> s2;
+    bool flag = true;
+    if (s1.size() > s2.size()) flag = false;
+    for (int i = 0; i<s1.size(); ++i){
+      if (s1[i] > s2[i]) flag = false;
     }
+    if (flag) cout << "YES";
+    else cout << "NO";
     // !Stop Here! */
     return 0;
 }

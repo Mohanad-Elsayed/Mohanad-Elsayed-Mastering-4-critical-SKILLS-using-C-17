@@ -16,9 +16,17 @@ int tests(); int solve(){
   //TODO tests()  solve() //
     // !Start Here! */
     string s; cin >> s;
-    forn(i, 0, s.size()){
-      cout << s[i]; 
-      if (i+1 < s.size() && s[i] != s[i+1]) cout << ' ';
+    int cnt = 0;
+    for (int i = 0; i<s.size(); ++i){
+      cnt++;
+      if (i+1 == s.size()){
+        cout << s[i] << cnt;
+        break;
+      }
+      if (s[i] != s[i+1]){
+        cout << s[i] << cnt << '_';
+        cnt = 0;
+      }
     }
     // !Stop Here! */
     return 0;

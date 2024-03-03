@@ -16,10 +16,18 @@ int tests(); int solve(){
   //TODO tests()  solve() //
     // !Start Here! */
     string s; cin >> s;
-    forn(i, 0, s.size()){
-      cout << s[i]; 
-      if (i+1 < s.size() && s[i] != s[i+1]) cout << ' ';
+    int carry = 0, cnt = 0;
+    reverse(all(s));
+    for (int i = 0; i<s.size(); ++i, ++cnt){
+      int n = s[i] - '0';
+      if (cnt < 5) n += 5;
+      n += carry;
+      s[i] = (n%10) + '0';
+      carry = n/10;
     }
+    reverse(all(s));
+    if (carry) cout << carry;
+    cout << s;
     // !Stop Here! */
     return 0;
 }
