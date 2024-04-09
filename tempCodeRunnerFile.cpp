@@ -1,1 +1,1 @@
-r*c
+array_sum(arr, 5);
