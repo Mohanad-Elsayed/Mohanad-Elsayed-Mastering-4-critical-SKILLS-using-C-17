@@ -1,1 +1,1 @@
-array_sum(arr, 5);
+suffix_sum
