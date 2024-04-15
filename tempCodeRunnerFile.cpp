@@ -1,1 +1,1 @@
-suffix_sum
+name = n;
