@@ -1,1 +1,3 @@
-name = n;
+int* end(){
+    //     return arr+end;
+    // }
