@@ -184,6 +184,15 @@ struct Library {
             }
         }
     }
+    void borrowList(string bname){
+        int idx = searchByPrefix(bname, 0);
+        cout << "List of users borrowed book " << books[idx].name << '\n';
+        for (int i = 0; i<currentUsers; i++){
+            if (users[i].borrowId == books[idx].id){
+                users[i].printUser();
+            }
+        }
+    }
 
     void makeCopy(Book* arr){
         for (int i = 0; i<currentSize; i++){
@@ -259,7 +268,7 @@ int main(){
     l1.returnBook("Amir", "c");
     l1.printByName();
     l1.printUsers();
-    l1.borrowList(1212);
+    l1.borrowList("a");
     
 
     return 0;
