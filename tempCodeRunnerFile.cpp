@@ -1,3 +1,2 @@
-int* end(){
-    //     return arr+end;
-    // }
+yName();
+    l1.printUs
