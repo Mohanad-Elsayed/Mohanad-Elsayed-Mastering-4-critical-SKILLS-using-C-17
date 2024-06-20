@@ -1,0 +1,20 @@
+#user:
+    ID
+    name
+    username
+    password
+    email
+    allow anon
+    questions out
+    questions in
+
+#questions
+    ID
+    from 
+    to
+    answered?
+    answer
+    anon?
+    in a thread?
+    parent id
+    
