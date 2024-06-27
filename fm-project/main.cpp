@@ -1,10 +1,17 @@
 #include <iostream>
+#include <map>
+#include <fstream>
 using namespace std;
-
 struct User {
     int id, allowanon;
     string name, username, email, password;
+    void add_user(){
+        
+    }
 };
+int userid, questionid;
+map<int, User> users;
+map<int, Question> questions;
 int main(){
     int menu1choice = -1;
     cout << "Menu: \n\t1: Login\n\t2: Sign Up\n";
